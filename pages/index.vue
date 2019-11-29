@@ -12,8 +12,10 @@
       .text-justify
         p Si vous êtes ici, c'est que vous avez besoin d'un développeur web. J'ai envie de vous dire que vous êtes au bon endroit; ceci étant, vous émettez certainement des réserves et avez besoin de preuves de mes compétences. C'est pourquoi tout est décrit ici.
         p Je vous invite donc à prendre le temps de visiter ce site, consulter
-          a(href='https://github.com/Fabezio/fabezio_nuxt', target='_blank') ma page github, afin de vous forger votre propre avis. N'hésitez pas à tester plus avant mes acquis, me faire un retour
-          a(href='mailto:fabezio@outlook.fr') par mail et/ou émettre des suggestions (c'est grâce aux erreurs qu'on apprend et progresse).
+          a(href='https://github.com/Fabezio/fabezio_nuxt', target='_blank')  ma page github,
+          |  afin de vous forger votre propre avis. N'hésitez pas à tester plus avant mes acquis, me faire un retour
+          a(href='mailto:fabezio@outlook.fr') par mail
+          |  et/ou émettre des suggestions (c'est grâce aux erreurs qu'on apprend et progresse).
         p Sur ce, je vous souhaite une bonne visite!
 
 

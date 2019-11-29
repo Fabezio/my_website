@@ -1,23 +1,22 @@
 <template lang="pug">
-  nav.navbar.is-primary.is-large.is-top-fixed(role='navigation', aria-label='main navigation')
-    .navbar-brand
-      div.tag.is-primary.is-vcentered
-        img.logo(src='@/assets/favicon-32.png', alt='logo', title='logo')
-      nuxt-link.home.button.is-warning.is-medium.subtitle.is-lowercase(to='/') fabezio.com
+  nav.navbar.is-primary.is-top-fixed(role='navigation', aria-label='main navigation')
+    div.navbar-brand
+      img.logo(src='@/assets/favicon-32.png', alt='logo', title='logo')
+      nuxt-link.subtitle.is-lowercase(to='/') fabezio.com
 
       a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbarBasicExample', @click="navToggle = isActive")
         span(aria-hidden='true')
         span(aria-hidden='true')
         span(aria-hidden='true')
 
-    #navbarBasicExample.navbar-menu
-      .navbar-start.is-vcentered
+    div#navbarBasicExample.navbar-menu
+      .navbar-start
         div(v-for='link in links', :key='link.route')
           nuxt-link.nav-link(:to='link.route')
             iconstack(:faclass='link.icon')
             span.route.is-uppercase {{link.name | capitalize({onlyFirstLetter: true}) }}
-      .navbar-end
-        .navbar-item
+      div.navbar-end
+        div.navbar-item
           div(v-for='link in dropdownLinks', :key='link.route')
             nuxt-link.nav-link.buttons(:to='link.route')
               iconstack(:faclass='link.icon')

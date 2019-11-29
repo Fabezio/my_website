@@ -1,10 +1,9 @@
-<template>
-  <div id="help">
-    <h1 class="text-center">Aide</h1>
-    <article class="text-justify">
-      <p>Un coup de main? (ou un clic de souris, peut-être...)</p>
-    </article>
-  </div>
+<template lang="pug">
+  #help
+    h1.title.text-center Aide
+    article.text-justify
+      p Un coup de main? (ou un clic de souris, peut-être...)
+
 </template>
 
 <script>

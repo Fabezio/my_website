@@ -1,68 +1,34 @@
-<template>
-  <div id="portfolio" class="">
-    <h1 class="text-center mb-4 header-shadow">Portfolio</h1>
-    <article>
-      <h2 class="header-shadow mb-3">Sites créés en formation:</h2>
-      <div class="card-deck">
-        <div
-          v-for="creation in creations"
-          :key="creation.mod"
-          class="card silver-shadow text-center"
-        >
-          <img
-            class="card-img-top"
-            data-toggle="modal"
-            :data-target="'#' + creation.mod"
-            :src="creation.img"
-            :alt="creation.alt"
-          />
-
-          <div class="card-body">
-            <h3 class="card-title text-uppercase">{{creation.name}}</h3>
-            <p class="card-text display-5">{{creation.desc}}</p>
-          </div>
-          <div class="card-footer mb-0">
-            <a
-              :href="'https://' + creation.url"
-              target="_blank"
-              class="btn btn-outline-link display-5 text-uppercase"
-            >
-              <i class="fas fa-sign-in-alt"></i>
-              Consulter
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        v-for="creation in creations"
-        :key="creation.mod"
-        class="modal collapse fade"
-        :id="creation.mod"
-      >
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class>{{creation.name}}</h4>
-              <button class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <img class="w-100" :src="creation.img" />
-            </div>
-            <div class="modal-footer">
-              <div class="btn-group btn-lg btn-rounded">
-                <button class="btn btn-dark" data-dismiss="modal">
-                  <i class="mr-1 far fa-window-close text-danger text-light"></i> Annuler
-                </button>
-                <a :href="'https://' + creation.url" target="_blank" class="btn btn-success">
-                  <i class="mr-1 fas fa-sign-in-alt"></i> Aller
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
+<template lang="pug">
+ #portfolio
+  h1.text-center.mb-4.header-shadow Portfolio
+  article
+    h2.header-shadow.mb-3 Sites créés en formation:
+    .card-deck
+      .card.silver-shadow.text-center(v-for='creation in creations', :key='creation.mod')
+        img.card-img-top(data-toggle='modal', :data-target="'#' + creation.mod", :src='creation.img', :alt='creation.alt')
+        .card-body
+          h3.card-title.text-uppercase {{creation.name}}
+          p.card-text.display-5 {{creation.desc}}
+        .card-footer.mb-0
+          a.btn.btn-outline-link.display-5.text-uppercase(:href="'https://' + creation.url", target='_blank')
+            i.fas.fa-sign-in-alt
+            | Consulter
+    .modal.collapse.fade(v-for='creation in creations', :key='creation.mod', :id='creation.mod')
+      .modal-dialog.modal-md
+        .modal-content
+          .modal-header
+            h4 {{creation.name}}
+            button.close(data-dismiss='modal') ×
+          .modal-body
+            img.w-100(:src='creation.img')
+          .modal-footer
+            .btn-group.btn-lg.btn-rounded
+              button.btn.btn-dark(data-dismiss='modal')
+                i.mr-1.far.fa-window-close.text-danger.text-light
+                |  Annuler
+              a.btn.btn-success(:href="'https://' + creation.url", target='_blank')
+                i.mr-1.fas.fa-sign-in-alt
+                |  Aller
 </template>
 
 <script>
@@ -100,7 +66,7 @@ export default {
     };
   }
   /*
-        
+
     */
 };
 </script>

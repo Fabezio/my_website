@@ -1,24 +1,15 @@
-<template>
-  <div id="services" class="">
-    <h1 class="text-center mb-4 header-shadow">Services</h1>
-    <div class="card-deck my-4">
-      <div v-for="service in services" :key="service.id" class="card silver-shadow">
-        <h2 class="card-header">{{service.title}}</h2>
-        <div class="card-body">
-          <p class="card-text text-justify">{{service.paragraph}}</p>
-        </div>
-      </div>
-    </div>
+<template lang="pug">
+  #services
+    h1.text-center.mb-4.header-shadow Services
+    .card-deck.my-4
+      .card.silver-shadow(v-for='service in services', :key='service.id')
+        h2.card-header {{service.title}}
+        .card-body
+          p.card-text.text-justify {{service.paragraph}}
+    .row.my-5
+      .col-md-12
+        a.btn.btn-lg.btn-block.btn-primary.text-light.btn-shadow(href='#') Oui, je demande une création/amélioration de site web
 
-    <div class="row my-5">
-      <div class="col-md-12">
-        <a
-          href="#"
-          class="btn btn-lg btn-block btn-primary text-light btn-shadow"
-        >Oui, je demande une création/amélioration de site web</a>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -49,7 +40,7 @@ export default {
     };
   }
   /*
-        
+
     */
 };
 </script>

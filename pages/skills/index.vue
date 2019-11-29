@@ -1,43 +1,20 @@
-<template>
-  <div id="skills" class> 
-    <h1 class="text-center my-5 header-shadow">Formations</h1>
-    <div v-for="code in codes" :key="code.title">
-      <h2 class="mt-5 mb-4 text-center header-shadow">{{code.title}}</h2>
-      <div class="card-deck "  >
-  
-      <!-- <div class="card-deck my-4"> -->
-        <div
-          v-for="card in code.content"
-          :key="card.name"
-          class="card rounded-lg border-info text-center"
-          
-        >
-          <div class="card-header bg-light ">
-            <img 
-            :src="card.img" alt 
-            class="card-top-img w-100 " 
-            
-            />
-            <h5 class="text-right text-muted mt-2 float-right">
-              <small class="badge badge-pill badge-info border border-primary float-right">v{{card.version}}</small>
-            </h5>
-          </div>
-          <div class="card-body border-top border-info">
-            
-            <p class="card-text">{{card.desc}}<span v-html="card.otherLogo"></span></p>
-          </div>
-          <h4 class="card-footer bg-info mb-0">{{card.name}}</h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="row mt-3">
-      <p class="text-muted">
-        * La version supportée dépend du navigateur
-        <br> ** Actuelle: 13 (à fins de test)
-      </p>
-    </div>-->
-  </div>
+<template lang="pug">
+#skills
+  h1.text-center.my-5.header-shadow Formations
+  div(v-for='code in codes', :key='code.title')
+    h2.mt-5.mb-4.text-center.header-shadow {{code.title}}
+    .card-deck
+      // <div class="card-deck my-4">
+      .card.rounded-lg.border-info.text-center(v-for='card in code.content', :key='card.name')
+        .card-header.bg-light
+          img.card-top-img.w-100(:src='card.img', alt='')
+          h5.text-right.text-muted.mt-2.float-right
+            small.badge.badge-pill.badge-info.border.border-primary.float-right v{{card.version}}
+        .card-body.border-top.border-info
+          p.card-text
+            | {{card.desc}}
+            span(v-html='card.otherLogo')
+        h4.card-footer.bg-info.mb-0 {{card.name}}
 </template>
 
 <script>
@@ -45,7 +22,7 @@ export default {
   name: "",
   data: () => {
     return {
-        
+
       codes: [
 
         {
@@ -67,7 +44,7 @@ export default {
               otherLogo: '<img src="https://s3.amazonaws.com/oodles-technologies1/blog-images/d73085c7-ff2c-4edb-9a72-8e1333dac14e.png" width="24px" alt="">',
             },
             // {
-              
+
               //   name: "Node-JS",
             //   img:
             //     "https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/full/nodejslogo.png",
@@ -172,7 +149,7 @@ export default {
     };
   }
   /*
-        
+
     */
 };
 </script>

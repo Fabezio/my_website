@@ -1,5 +1,7 @@
-<template>
-  <div>
-    <h1 class="text-center">Plan du site</h1>
-  </div>
+<template lang="pug">
+  div
+    h1.title.text-center Plan du site
+    h2.subtitle
+    i Pour garder le nord
+
 </template>

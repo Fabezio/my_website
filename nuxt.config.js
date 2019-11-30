@@ -8,7 +8,7 @@ module.exports = {
     title: process.env.npm_package_name || 'fabezio.fr, développement web NuxtJS',
 
     bodyAttrs: {
-      class: 'has-navbar-bottom-fixed has-navbar-top-fixed'
+      class: 'has-navbar-bottom-fixed has-navbar-fixed-top'
     },
 
     meta: [

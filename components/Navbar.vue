@@ -1,6 +1,6 @@
 <template lang="pug">
   nav.navbar.is-primary.is-top-fixed(role='navigation', aria-label='main navigation')
-    div.navbar-brand
+    .navbar-brand
       img.logo(src='@/assets/favicon-32.png', height="32", alt='logo', title='logo')
       nuxt-link.subtitle.is-lowercase(to='/')
         | fabezio.com
@@ -10,14 +10,14 @@
         span(aria-hidden='true')
         span(aria-hidden='true')
 
-    div#navbarBasicExample.navbar-menu
+    #navbarBasicExample.navbar-menu
       .navbar-start
         div(v-for='link in links', :key='link.route')
           nuxt-link.nav-link.columns(:to='link.route')
             IconStack.column(:faClass='link.icon')
             span.route.is-uppercase.column {{link.name }}
-      div.navbar-end
-        div.navbar-item
+      .navbar-end
+        .navbar-item
           div(v-for='link in dropdownLinks', :key='link.route')
             nuxt-link.nav-link.buttons(:to='link.route')
               iconstack(:faclass='link.icon')

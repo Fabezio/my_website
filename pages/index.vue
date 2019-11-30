@@ -1,13 +1,16 @@
 <template lang="pug">
   div
-    div.media.border-top.border-secondary.p-3.bg-primary
-    div.container
-      img.align-self-start.media-img.border.border-dark.mr-3.rounded-lg.float-left(src='@/assets/img/me.jpg')
-      .media-body.vertical-middle
-        h1.title fabezio.com
-        h2.subtitle Site CV de Développeur Web FrontEnd
+    .has-background-primary
+      .container
+        .media
+          .media-left
+            img.image.is-rounded.is-128x128(src='@/assets/img/me.jpg')
+            .media-body.vertical-middle
+          .media-content
+            h1.title fabezio.com
+            h2.subtitle Site CV de Développeur Web FrontEnd
 
-    div.container.my-5
+    .container
       h2.subtitle.text-center.mb-4 Bienvenue sur ce site!
       .text-justify
         p Si vous êtes ici, c'est que vous avez besoin d'un développeur web. J'ai envie de vous dire que vous êtes au bon endroit; ceci étant, vous émettez certainement des réserves et avez besoin de preuves de mes compétences. C'est pourquoi tout est décrit ici.

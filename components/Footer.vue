@@ -1,16 +1,18 @@
 <template lang="pug">
-  footer.has-background-primary.footer.d-block.mx-auto.py-3.bg-primary.text-dark.font-weight-light.is-centered
-    nav.navbar.has-background-primary
+  footer.has-background-primary.footer.has-text-centered
+    nav.navbar.has-background-primary.is-fixed-bottom.is-centered
       // elements principaux
-      div.nav-item.nav-pill(v-for='link in links', :key='link.route')
-        nuxt-link.nav-link.is-inline.columns(:to='link.route')
-          IconStack.is-float-left.column(:faClass='link.icon')
-          i.route.is-uppercase.column {{link.name }}
-      div(href='https://github.com/Fabezio/fabezio_nuxt', target='_blank')
-        IconStack(faClass='fab fa-github-alt')
-          span.route.is-uppercase Mon code source
+      div.navbar-item(v-for='link in links', :key='link.route')
+        nuxt-link.navbar-item.route(:to='link.route')
+          div.icon
+            IconStack(:faClass='link.icon')
+          .subtitle.is-4 {{link.name }}
+      div.navbar-item.route(href='https://github.com/Fabezio/fabezio_nuxt', target='_blank')
+        div.icon
+          IconStack(faClass='fab fa-github-alt')
+        .subtitle.is-4 mon code source
     p.is-centered Tous droits réservés - fabezio.fr
-      span © 2019
+      span &copy; 2019
 
 </template>
 

@@ -1,8 +1,8 @@
 <template lang="pug">
 #skills
-  h1.text-center.my-5.header-shadow Formations
+  h1.title.text-center.my-5.header-shadow Formations
   div(v-for='code in codes', :key='code.title')
-    h2.mt-5.mb-4.text-center.header-shadow {{code.title}}
+    h2.subtitle.mt-5.mb-4.text-center.header-shadow {{code.title}}
     .card-deck
       // <div class="card-deck my-4">
       .card.rounded-lg.border-info.text-center(v-for='card in code.content', :key='card.name')
